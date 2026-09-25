@@ -1,0 +1,12 @@
+@use '../abstracts/variables' as vars;
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-xl;
+}
+
+.section__title {
+  margin-bottom: vars.$spacing-md;
+  color: vars.$accent-color;
+}

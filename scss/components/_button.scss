@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as vars;
+
+.form__button {
+  background-color: vars.$accent-color;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: calc(vars.$border-radius / 2);
+  cursor: pointer;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@each $name, $color in vars.$theme-colors {
+  .btn-#{$name} {
+    background-color: $color;
+    color: #ffffff;
+    padding: vars.$spacing-sm vars.$spacing-md;
+    border-radius: vars.$border-radius;
+    border: none;
+  }
+}

@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.nav {
+  &__list {
+    @include mix.flex-center($direction: row, $justify: flex-start);
+    list-style: none;
+    gap: vars.$spacing-md;
+  }
+
+  &__link {
+    color: vars.$accent-color;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.card {
+  @include mix.surface-card;
+}
+
+.profile-card {
+  @include mix.flex-center($direction: column, $align: center);
+  gap: vars.$spacing-lg;
+
+  @include mix.respond-to('tablet') {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &__figure {
+    .profile-card__image {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as vars;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$spacing-md;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: vars.$spacing-xs;
+  }
+
+  &__input,
+  &__textarea {
+    padding: vars.$spacing-sm;
+    border: 1px solid vars.$border-color;
+    border-radius: calc(vars.$border-radius / 2);
+    background-color: vars.$bg-primary;
+    color: vars.$text-primary;
+  }
+}

@@ -1,0 +1,27 @@
+@use '../abstracts/mixins' as mix;
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "sidebar"
+    "footer";
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include mix.respond-to('desktop') {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+      "header  header"
+      "main    sidebar"
+      "footer  footer";
+  }
+
+  &__header { grid-area: header; }
+  &__main   { grid-area: main; }
+  &__aside  { grid-area: sidebar; }
+  &__footer { grid-area: footer; }
+}

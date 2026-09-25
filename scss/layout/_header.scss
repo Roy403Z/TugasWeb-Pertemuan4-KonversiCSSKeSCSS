@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mix;
+
+.header {
+  @include mix.surface-card;
+  @include mix.flex-center($direction: column, $justify: space-between, $align: stretch);
+  gap: vars.$spacing-md;
+
+  @include mix.respond-to('tablet') {
+    flex-direction: row;
+    align-items: center;
+  }
+}
